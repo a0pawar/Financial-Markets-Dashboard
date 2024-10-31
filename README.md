@@ -1,1 +1,1 @@
-This project develops a Financial Market Monitor
+This project deploys a Financial Market Monitor.
