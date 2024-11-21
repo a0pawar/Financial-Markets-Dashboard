@@ -26,13 +26,13 @@ def load_data():
     """
     Loads data from Excel file.
     """
-    sectoral_data = data_loader_bloomberg(filename='Consolidated_Fin_market Data.xlsx', sheet_name=0)
-    benchmark_data = data_loader_bloomberg(filename='Consolidated_Fin_market Data.xlsx', sheet_name=1)
-    global_data = data_loader_bloomberg(filename='Consolidated_Fin_market Data.xlsx', sheet_name=2)
-    valuation_data = data_loader_bloomberg(filename='Consolidated_Fin_market Data.xlsx', sheet_name=3)
-    flows_data = data_loader_bloomberg(filename='Consolidated_Fin_market Data.xlsx', sheet_name=4)
-    macro_data = data_loader_bloomberg(filename='Consolidated_Fin_market Data.xlsx', sheet_name=5)
-    impact_data = data_loader_bloomberg(filename='Consolidated_Fin_market Data.xlsx', sheet_name=7) 
+    sectoral_data = data_loader_bloomberg(filename='Fin_Dashboard.xlsx', sheet_name=0)
+    benchmark_data = data_loader_bloomberg(filename='Fin_Dashboard.xlsx', sheet_name=1)
+    global_data = data_loader_bloomberg(filename='Fin_Dashboard.xlsx', sheet_name=2)
+    valuation_data = data_loader_bloomberg(filename='Fin_Dashboard.xlsx', sheet_name=3)
+    flows_data = data_loader_bloomberg(filename='Fin_Dashboard.xlsx', sheet_name=4)
+    macro_data = data_loader_bloomberg(filename='Fin_Dashboard.xlsx', sheet_name=5)
+    impact_data = data_loader_bloomberg(filename='Fin_Dashboard.xlsx', sheet_name=7) 
     return sectoral_data, benchmark_data, global_data, valuation_data, flows_data, macro_data, impact_data
 
 def calculate_returns(data):
