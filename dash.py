@@ -292,7 +292,7 @@ with tab1:
             legend=dict(orientation="h", yanchor="auto", y=-0.5, xanchor="auto", x=0.5),
             legend_title=None,
             yaxis=dict(showgrid=False),
-            font=dict(size=12)
+            font=dict(size=16)
         )
 
         return fig
@@ -310,8 +310,8 @@ with tab1:
             labels={'x': 'Indices', 'y': 'Returns (%)'},
             title=title
         )
-        fig.update_traces(textposition='outside', textfont=dict(size=10))
-        fig.update_layout(height=400, font=dict(size=12), 
+        fig.update_traces(textposition='outside', textfont=dict(size=14))
+        fig.update_layout(height=400, font=dict(size=16), 
                         margin=dict(l=0, r=0, t=30, b=0), 
                         yaxis=dict(range=[min_value, max_value], showgrid=False), 
                         xaxis=dict(tickangle=-90),
@@ -352,7 +352,7 @@ with tab1:
         flows_data = replace_repeated_tail_values(flows_data)
         flows_monthly = flows_data.resample('M').sum().round(2)
         flows_monthly = flows_monthly.reset_index(names='Date')
-        flows_monthly = flows_monthly.iloc[-36:,:]
+        flows_monthly = flows_monthly.iloc[-24:,:]
 
         # Convert columns to numeric, excluding the 'Date' column
         for col in flows_monthly.columns[1:]:
@@ -369,7 +369,7 @@ with tab1:
 
         fig_flows.update_layout(
             height=300,
-            font=dict(size=12), 
+            font=dict(size=16), 
             margin=dict(l=0, r=0, t=30, b=0),
             yaxis_title="₹ crore",
             legend_title=None,
