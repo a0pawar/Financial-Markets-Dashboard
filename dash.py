@@ -350,7 +350,7 @@ with tab1:
         st.markdown("<h3 style='text-align: center; font-size: 16px;'>Net Monthly Flows to Indian Equity Markets</h3>", unsafe_allow_html=True)
 
         flows_data = replace_repeated_tail_values(flows_data)
-        flows_monthly = flows_data.resample('ME').sum().round(2)
+        flows_monthly = flows_data.resample('M').sum().round(2)
         flows_monthly = flows_monthly.reset_index(names='Date')
         flows_monthly = flows_monthly.iloc[-36:,:]
 
