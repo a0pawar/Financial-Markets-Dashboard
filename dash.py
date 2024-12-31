@@ -263,8 +263,8 @@ with tab1:
 
     # Filter data and calculate returns
     mask = (benchmark_data.index >= pd.Timestamp(start_date)) & (benchmark_data.index <= pd.Timestamp(end_date))
-    benchmark_data_filtered = benchmark_data.loc[mask].iloc[:-1,:]
-    sectoral_data_filtered = sectoral_data.loc[mask].iloc[:-1,:]
+    benchmark_data_filtered = benchmark_data.loc[mask].iloc[:,:]
+    sectoral_data_filtered = sectoral_data.loc[mask].iloc[:,:]
     global_data_filtered = global_data.loc[(global_data.index >= pd.Timestamp(start_date)) & (global_data.index <= pd.Timestamp(end_date))].iloc[:-1,:]
     valuation_data_filtered = valuation_data.loc[(valuation_data.index >= pd.Timestamp(start_date)) & (valuation_data.index <= pd.Timestamp(end_date))].iloc[:-1,:]
 
